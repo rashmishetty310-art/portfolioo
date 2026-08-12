@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Rashmi Shetty - Personal Portfolio">
+
+    <title>Rashmi Shetty | Personal Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #222;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 35px;
+        }
+
+        header h1 {
+            margin: 15px 0 5px;
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        /* Profile Photo */
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #555;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #ddd;
+        }
+
+        /* Main */
+        main {
+            width: 80%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section {
+            background-color: white;
+            margin: 25px 0;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #555;
+            padding-bottom: 10px;
+        }
+
+        /* Hide all sections */
+        .page {
+            display: none;
+        }
+
+        /* Show selected section */
+        .active {
+            display: block;
+        }
+
+        /* Resume Buttons */
+        .resume-button {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 12px 22px;
+            margin: 10px 10px 10px 0;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .resume-button:hover {
+            background-color: #777;
+            transform: translateY(-2px);
+        }
+
+        /* Projects */
+        .project {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .project h3 {
+            color: #333;
+        }
+
+        /* Skills */
+        ul {
+            line-height: 2;
+        }
+
+        /* Certificates */
+        .certificate {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .certificate h3 {
+            color: #333;
+        }
+
+        /* Contact */
+        .contact a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+
+            main {
+                width: 95%;
+            }
+
+            nav {
+                padding: 12px 5px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+                font-size: 14px;
+            }
+
+            header {
+                padding: 25px 15px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .profile-photo {
+                width: 130px;
+                height: 130px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            .resume-button {
+                display: block;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <!-- Profile Photo -->
+        <img src="profile.jpg" alt="Rashmi Shetty" class="profile-photo">
+
+        <h1>Rashmi Shetty</h1>
+
+        <p>Web Developer | Student | Designer</p>
+
+    </header>
+
+
+    <!-- Navigation -->
+    <nav>
+
+        <a onclick="showPage('home')">Home</a>
+
+        <a onclick="showPage('about')">About</a>
+
+        <a onclick="showPage('skills')">Skills</a>
+
+        <a onclick="showPage('projects')">Projects</a>
+
+        <a onclick="showPage('certificates')">Certificates</a>
+
+        <a onclick="showPage('contact')">Contact</a>
+
+    </nav>
+
+
+    <!-- Main Content -->
+    <main>
+
+
+        <!-- Home Page -->
+        <section id="home" class="page active">
+
+            <h2>Welcome to My Portfolio</h2>
+
+            <h3>Hello, I am Rashmi Shetty.</h3>
+
+            <p>
+                I am an Information Science and Engineering student
+                interested in programming and web development.
+            </p>
+
+            <p>
+                I have knowledge of HTML, CSS, Java, Python, SQL and DBMS.
+                I enjoy learning new technologies and developing projects.
+            </p>
+
+            <p>
+                This portfolio contains information about my skills,
+                projects, certificates and contact details.
+            </p>
+
+
+            <!-- Resume Buttons -->
+            <h3>My Resume</h3>
+
+            <a href="Rashmi_Shetty_Resume.pdf"
+               class="resume-button"
+               target="_blank">
+                View Resume
+            </a>
+
+            <a href="Rashmi_Shetty_Resume.pdf"
+               class="resume-button"
+               download>
+                Download Resume
+            </a>
+
+        </section>
+
+
+        <!-- About Page -->
+        <section id="about" class="page">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am Rashmi Shetty, an Information Science and Engineering
+                student with an interest in programming and web development.
+            </p>
+
+            <p>
+                I have basic knowledge of HTML, CSS, Java, Python, SQL,
+                DBMS and Data Structures. I enjoy learning new technologies
+                and applying my knowledge through practical projects.
+            </p>
+
+            <p>
+                I am interested in developing websites and software
+                applications. I also enjoy solving programming problems
+                and improving my technical skills.
+            </p>
+
+            <p>
+                I believe in continuous learning and gaining practical
+                experience. My goal is to develop my technical knowledge,
+                improve my problem-solving skills and build a successful
+                career in the technology field.
+            </p>
+
+        </section>
+
+
+        <!-- Skills Page -->
+        <section id="skills" class="page">
+
+            <h2>My Skills</h2>
+
+            <p>
+                I have developed basic knowledge and practical skills
+                in the following areas:
+            </p>
+
+            <ul>
+
+                <li>
+                    HTML and CSS – Web Page Development
+                </li>
+
+                <li>
+                    Java – Object-Oriented Programming
+                </li>
+
+                <li>
+                    Python – Basic Programming
+                </li>
+
+                <li>
+                    SQL – Database Management
+                </li>
+
+                <li>
+                    DBMS – Database Concepts
+                </li>
+
+                <li>
+                    Data Structures – Problem Solving
+                </li>
+
+                <li>
+                    Communication Skills
+                </li>
+
+                <li>
+                    Problem-Solving Skills
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- Projects Page -->
+        <section id="projects" class="page">
+
+            <h2>My Projects</h2>
+
+
+            <article class="project">
+
+                <h3>Library Management System</h3>
+
+                <p>
+                    A Java-based project used to manage books,
+                    students and library records.
+                </p>
+
+            </article>
+
+
+            <article class="project">
+
+                <h3>Personal Portfolio Website</h3>
+
+                <p>
+                    A portfolio website created using HTML and CSS.
+                </p>
+
+            </article>
+
+
+            <article class="project">
+
+                <h3>Student Management System</h3>
+
+                <p>
+                    A simple application for storing and managing
+                    student information.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- Certificates Page -->
+        <section id="certificates" class="page">
+
+            <h2>My Certificates</h2>
+
+
+            <div class="certificate">
+
+                <h3>
+                    AI Literacy – IBM SkillsBuild
+                </h3>
+
+                <p>
+                    Completed December 2025
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <h3>
+                    CEATHERION 2025 – Certificate of Participation
+                </h3>
+
+                <p>
+                    24-Hour Hackathon – Canara Engineering College
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact Page -->
+        <section id="contact" class="page contact">
+
+            <h2>Contact Me</h2>
+
+
+            <p>
+                📧 Email:
+
+                <a href="mailto:rashmishetty310@gmail.com">
+                    rashmishetty310@gmail.com
+                </a>
+            </p>
+
+
+            <p>
+                📱 Phone: +91 9019344865
+            </p>
+
+
+            <p>
+                💼 LinkedIn:
+
+                <a href="https://www.linkedin.com/in/rashmi-shetty-8ba5b3343/"
+                   target="_blank">
+
+                    Rashmi Shetty
+
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 Rashmi Shetty. All Rights Reserved.
+        </p>
+
+        <p>
+
+            <a href="mailto:rashmishetty310@gmail.com">
+                Email
+            </a>
+
+            |
+
+            <a href="https://www.linkedin.com/in/rashmi-shetty-8ba5b3343/"
+               target="_blank">
+
+                LinkedIn
+
+            </a>
+
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function showPage(pageId) {
+
+            // Hide all pages
+            let pages = document.querySelectorAll(".page");
+
+            pages.forEach(function(page) {
+
+                page.classList.remove("active");
+
+            });
+
+
+            // Show selected page
+            document.getElementById(pageId).classList.add("active");
+
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
